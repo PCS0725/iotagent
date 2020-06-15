@@ -41,7 +41,7 @@ public class IOTHelper {
 
     static final String LOG_TAG = IOTHelper.class.getCanonicalName();
 
-    private static final String CUSTOMER_SPECIFIC_ENDPOINT = "a2o2raq026ld6u-ats.iot.us-east-1.amazonaws.com";
+    private static final String CUSTOMER_SPECIFIC_ENDPOINT = "a2niulchpwsxe-ats.iot.us-east-1.amazonaws.com";
 
     private static final String AWS_IOT_POLICY_NAME = "pubsubiotpolicy";
 
@@ -51,11 +51,12 @@ public class IOTHelper {
 
     private static final String KEYSTORE_PASSWORD = "password";
 
-    private final String CERT_FILE_NAME = "deviceCert.pem";
+    private final String CERT_FILE_NAME = "deviceCertAndCACert.crt";
 
     private final String PRIVKEY_FILE_NAME = "deviceCert.key";
 
-    private static final String IOT_GENERATED_CERT = "default";
+    //"new is the certificate from CA registered with AWS"
+    private static final String IOT_GENERATED_CERT = "new";
 
     private static final String CERTIFICATE_ID  = "b9eadbe12eb863304c7d72e210065a3565e909b9acdf10901f11910e15d8ef45";
 
@@ -302,7 +303,7 @@ public class IOTHelper {
 
         keystoreName = KEYSTORE_NAME;
         keystorePassword = KEYSTORE_PASSWORD;
-        certificateId = CERTIFICATE_ID; //set here which cert you want to use.
+        certificateId = IOT_GENERATED_CERT; //set here which cert you want to use.
 
         //Check if certificate already exists in the keystore
         try {

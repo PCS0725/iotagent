@@ -253,7 +253,7 @@ public class JobMessageHandler {
             intent.setAction("UPDATE_EVENT");
             intent.setPackage(packageName);
             intent.putExtra("AvailableVersion", latestVersion);
-            intent.putExtra("", filePath);
+            intent.putExtra("FilePath", filePath);
             intent.putExtra("IsUpdateMandatory", "true");
             context.sendBroadcast(intent);
             Log.i(LOG_TAG, "Broadcast sent");

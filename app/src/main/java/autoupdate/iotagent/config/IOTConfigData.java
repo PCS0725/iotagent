@@ -8,7 +8,7 @@ package autoupdate.iotagent.config;
 public class IOTConfigData {
 
     //the unique thing name to which the device is registered
-    public static final String DEVICE_ID = "t1";
+    public static final String DEVICE_ID = "\"430a5bc135a68f5af0544d3abbc0c092caff4d41e3cefce6574f2c688aee9344\"";
 
     //subscribe to this topic to get list of pending(queued and in progress jobs)
     public static final String GET_JOBS_SUBSCRIBE_TOPIC = String.format("$aws/things/%s/jobs/get/accepted", DEVICE_ID);
